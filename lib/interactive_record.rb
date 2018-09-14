@@ -58,6 +58,7 @@ class InteractiveRecord
     
     def self.find_by(options={}) 
       sql = puts  "SELECT * FROM #{self.table_name} WHERE #{options.keys.to_s.delete("[:]")} = #{options.values.to_s.delete("[:]")}"
+      binding.pry 
       DB[:conn].execute(sql)
     end 
 end
