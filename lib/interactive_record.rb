@@ -60,7 +60,7 @@ class InteractiveRecord
       sql = options.each do |key, value|
        puts  "SELECT * FROM #{self.table_name} WHERE #{key} = #{value}"
         end 
-        binding.pry
+        binding.pry 
       DB[:conn].execute(sql)
     end 
 end
